@@ -1,0 +1,30 @@
+@using API.Controllers
+@using CAPA_DATOS.Security
+<!DOCTYPE html>
+<html lang="en">
+@{
+    string identify = Context.Session.GetString("seassonKey");
+}
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] UNAN BD</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <script>
+        function displayNav() {
+            Aside.className = Aside.className.includes("navActive") ? "" : "navActive";
+        }
+    </script>
+    <script type="module">
+        import { WSecurity } from "/WDevCore/Security/WSecurity.js";           
+    </script>
+</head>
+
+<body id="AdminTemplate">
+    <main role="main" id="Main">
+        @RenderBody()
+    </main>
+</body>
+
+</html>
