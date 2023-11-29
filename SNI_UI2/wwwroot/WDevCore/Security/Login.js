@@ -13,7 +13,7 @@ const OnLoad = async () => {
             WRender.Create({ tagName: "style", innerHTML: '@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");' }),
             WRender.createElement(StylesControlsV2),
             WRender.Create(MasterStyle),
-            //{ tagName: 'img', src: "/Media/Image/logo.png", class: 'className' },
+            { tagName: 'img', src: "/Media/Image/escudo-unan.png", class: 'className' },
             { tagName: 'h3', innerText: "UNAN", class: 'className' },
             {
                 children: ["Correo", {
