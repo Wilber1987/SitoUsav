@@ -50,9 +50,9 @@ namespace CAPA_DATOS
         {
             try
             {
-                string SGBD_USER = "";
-                string SWGBD_PASSWORD = "";
-                string SQLServer = "";
+                string SGBD_USER = "sa";
+                string SWGBD_PASSWORD = "123";
+                string SQLServer = "DESKTOP-FOSVOVQ\\SQLEXPRESS01";
                 Anonimo = false;
                 return createConexion(SQLServer, SGBD_USER, SWGBD_PASSWORD);
             }
@@ -69,7 +69,11 @@ namespace CAPA_DATOS
             try
             {
                 Anonimo = false;
+<<<<<<< HEAD
                 return createConexion(".", "sa", "123");
+=======
+                return createConexion(".\\SQLEXPRESS01", "sa", "123");
+>>>>>>> 3b7fd12b6a4fbe54397241a38c3e8d78239bda05
            // problema 01  createConexion(".\\SQLEXPRESS", "sa", "123");
             }
             catch (Exception)
