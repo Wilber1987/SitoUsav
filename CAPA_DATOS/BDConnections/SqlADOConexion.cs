@@ -52,7 +52,7 @@ namespace CAPA_DATOS
             {
                 string SGBD_USER = "sa";
                 string SWGBD_PASSWORD = "123";
-                string SQLServer = "DESKTOP-FOSVOVQ\\SQLEXPRESS01";
+                string SQLServer = "DESKTOP-A7DCQGN";
                 Anonimo = false;
                 return createConexion(SQLServer, SGBD_USER, SWGBD_PASSWORD);
             }
@@ -69,7 +69,7 @@ namespace CAPA_DATOS
             try
             {
                 Anonimo = false;
-                return createConexion(".\\SQLEXPRESS01", "sa", "123");
+                return createConexion(".", "sa", "123");
 
            // problema 01  createConexion(".\\SQLEXPRESS", "sa", "123");
             }
