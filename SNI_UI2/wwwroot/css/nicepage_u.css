@@ -1108,11 +1108,25 @@ ol {
 .u-text:not(ul):not(ol):not(p):not(.u-post-content):not(.u-block-content):not(.u-product-desc):not(.u-cart-block-content):not(.u-checkout-block-content) a:hover {
   text-decoration: none;
 }
+
+.minus,
+a {
+  float: right;
+            display: block;
+            color: rgb(91, 55, 199);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+}
+
 .u-link,
 a {
-  border-top-width: 0;
-  border-left-width: 0;
-  border-right-width: 0;
+  float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
 }
 .u-link {
   display: table;
@@ -13235,7 +13249,7 @@ section.u-image:not(.u-hover-box),
   position: fixed;
 }
 .u-overlap.u-overlap-transparent .u-header {
-  background-color: transparent !important;
+  background-color: black !important;
   background-image: none !important;
 }
 .u-overlap.u-offcanvas-opened .u-header.u-sticky {

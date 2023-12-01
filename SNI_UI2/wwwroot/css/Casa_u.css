@@ -3,6 +3,12 @@
   background-position: 50% 50%;
 }
 
+header{
+  
+  box-shadow: 0 0 6px rgba(0,0,0, .5);
+  
+}
+
 .u-section-1 .u-sheet-1 {
   min-height: 576px;
 }
