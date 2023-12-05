@@ -49,3 +49,20 @@
     background-color: #ddd;
     color: black;
 }
+
+.video{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.conten{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img{
+    cursor: pointer;
+    
+}

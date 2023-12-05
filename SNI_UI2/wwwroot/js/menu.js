@@ -13,3 +13,24 @@ window.addEventListener('click', e=>{
         nave.classList.toggle('spread')
     }
 })
+
+//videos
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Obtener el valor del parámetro de la URL
+    var videoId = obtenerParametroUrl("videoId");
+
+    // Si hay un videoId, establecer la URL del iframe
+    if (videoId) {
+        var youtubeUrl = "https://www.youtube.com/embed/" + videoId;
+        document.getElementById("youtubeIframe").src = youtubeUrl;
+    }
+});
+
+// Función para obtener un parámetro de la URL por su nombre
+function obtenerParametroUrl(nombre) {
+    nombre = nombre.replace(/[[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + nombre + "=([^&#]*)");
+    var resultados = regex.exec(location.search);
+    return resultados === null ? "" : decodeURIComponent(resultados[1].replace(/\+/g, " "));
+}
