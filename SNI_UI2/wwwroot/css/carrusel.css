@@ -19,7 +19,7 @@
     box-sizing: border-box;
 }
 
-button {
+button.carousel {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -34,6 +34,32 @@ button:first-child {
 
 button:last-child {
     right: 0;
+}
+
+.employee-card {
+    background-color: #083457;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.employee-card img {
+    width: 100%;
+    max-width: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.employee-card h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.employee-card p {
+    font-size: 14px;
+    color: #555;
 }
 
 
