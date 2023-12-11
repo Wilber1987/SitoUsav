@@ -4,7 +4,7 @@
   Layout = "_Layout_Usav";
 
 }
-
+@model SNI_UI2.Pages.IndexModel
 
 
 
@@ -228,33 +228,18 @@
     <div class="u-expanded-width u-layout-horizontal u-list u-list-1">
       <div class="carousel-container">
         <div class="carousel" id="carousel">
-          <!-- Contenido del carrusel -->
-          <div class="employee" id="employee1">
+    @foreach (var employee in Model.Employees)
+    {
+        <div class="employee">
             <div class="employee-card">
-              <img src="/imagenes/empleado1.jpg" alt="Foto del empleado 2">
-              <h2>Empleado 2</h2>
-              <p>Descripción del empleado 2.</p>
+                <!-- Mostrar la información del empleado -->
+                <h2>@employee.Name</h2>
+                <p>@employee.Position</p>
+                <p>@employee.Experience years of experience</p>
             </div>
-          </div>
-          <div class="employee" id="employee2">
-            <div class="employee-card">
-              <img src="ruta/a/la/imagen/empleado2.jpg" alt="Foto del empleado 2">
-              <h2>Empleado 2</h2>
-              <p>Descripción del empleado 2.</p>
-            </div>
-          </div>
-
-          <div class="employee" id="employee3">
-            <h2>Empleado 3</h2>
-            <p>Descripción del empleado 3.</p>
-          </div>
-
-          <div class="employee" id="employee3">
-            <h2>Empleado 3</h2>
-            <p>Descripción del empleado 3.</p>
-          </div>
-          <!-- Agrega más empleados según sea necesario -->
         </div>
+    }
+</div>
         <button class="carousel" onclick="prevSlide()">Anterior</button>
         <button class="carousel" onclick="nextSlide()">Siguiente</button>
       </div>
