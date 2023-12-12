@@ -19,3 +19,4 @@ function prevSlide() {
 
 // Mostrar el primer slide al cargar la página
 showSlide(currentIndex);
+

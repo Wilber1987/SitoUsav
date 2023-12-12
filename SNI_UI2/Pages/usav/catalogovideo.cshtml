@@ -1,67 +1,33 @@
 @page
+@model SNI_UI2.Pages.Usav.VideosModel
+@using API.DatabaseModels
 @{
-  Layout = "_Layout_Usav";
+    Layout = "_Layout_Usav";
 }
 
 <section class="galleryvideo">
-   <h2 class="titulo">NUESTRO TRABAJO</h2>
-  <div class="conten">
-   
-    <div class="contenedor-imagen">
-      <a href="~/usav/videos?videoId=be3AtvAWttU">
-        <img class="img"
-          src="https://i.ytimg.com/an_webp/be3AtvAWttU/mqdefault_6s.webp?du=3000&sqp=CKqKw6sG&rs=AOn4CLBeuvGL5ARBhQ9l0yMI-WJ9uroAWg"
-          alt="">
-        <img src="/imagenes/iconoPlay.png" class="icono-play" alt="Icono de reproducción">
-      </a>
+    <h2 class="titulo">NUESTRO TRABAJO</h2>
+    <div class="conten">
+        @foreach(var video in new Videos().Get<Videos>()){
+            <div class="contenedor-imagen">
+                <a href="~/usav/videos?videoId=@video.URL">
+                    <img class="img" src="@video.ImagenURL" alt="">
+                    <img src="/imagenes/iconoPlay.png" class="icono-play" alt="Icono de reproducción">
+                </a>
+            </div>
+            }
+        @foreach (var video in Model.Videos)
+        {
+            <div class="contenedor-imagen">
+                <a href="~/usav/videos?videoId=@video.URL">
+                    <img class="img" src="@video.ImagenURL" alt="">
+                    <img src="/imagenes/iconoPlay.png" class="icono-play" alt="Icono de reproducción">
+                </a>
+            </div>
+        }
     </div>
-
-    <div class="contenedor-imagen">
-      <a href="~/usav/videos?videoId=be3AtvAWttU">
-        <img class="img"
-          src="https://i.ytimg.com/an_webp/be3AtvAWttU/mqdefault_6s.webp?du=3000&sqp=CKqKw6sG&rs=AOn4CLBeuvGL5ARBhQ9l0yMI-WJ9uroAWg"
-          alt="">
-        <img src="/imagenes/iconoPlay.png" class="icono-play" alt="Icono de reproducción">
-      </a>
-    </div>
-
-    <div class="contenedor-imagen">
-      <a href="~/usav/videos?videoId=NHRfk9JXQHY">
-        <img class="img"
-          src="https://i.ytimg.com/an_webp/NHRfk9JXQHY/mqdefault_6s.webp?du=3000&sqp=CPiAw6sG&rs=AOn4CLBV-snmV3Qo1mxChc1GDc3QFEBjPw"
-          alt="">
-        <img src="/imagenes/iconoPlay.png" class="icono-play" alt="Icono de reproducción">
-      </a>
-    </div>
-
-     <div class="contenedor-imagen">
-      <a href="~/usav/videos?videoId=NHRfk9JXQHY">
-        <img class="img"
-          src="https://i.ytimg.com/an_webp/NHRfk9JXQHY/mqdefault_6s.webp?du=3000&sqp=CPiAw6sG&rs=AOn4CLBV-snmV3Qo1mxChc1GDc3QFEBjPw"
-          alt="">
-        <img src="/imagenes/iconoPlay.png" class="icono-play" alt="Icono de reproducción">
-      </a>
-    </div>
-    <div class="contenedor-imagen">
-      <a href="~/usav/videos?videoId=NHRfk9JXQHY">
-        <img class="img"
-          src="https://i.ytimg.com/an_webp/NHRfk9JXQHY/mqdefault_6s.webp?du=3000&sqp=CPiAw6sG&rs=AOn4CLBV-snmV3Qo1mxChc1GDc3QFEBjPw"
-          alt="">
-        <img src="/imagenes/iconoPlay.png" class="icono-play" alt="Icono de reproducción">
-      </a>
-    </div>
-    
-    <div class="contenedor-imagen">
-      <a href="~/usav/videos?videoId=NHRfk9JXQHY">
-        <img class="img"
-          src="https://i.ytimg.com/an_webp/NHRfk9JXQHY/mqdefault_6s.webp?du=3000&sqp=CPiAw6sG&rs=AOn4CLBV-snmV3Qo1mxChc1GDc3QFEBjPw"
-          alt="">
-        <img src="/imagenes/iconoPlay.png" class="icono-play" alt="Icono de reproducción">
-      </a>
-    </div>
-    
-
-
-  </div>
-
 </section>
+
+
+
+
