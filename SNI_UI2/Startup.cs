@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using SNI_UI2.Services;
 
 namespace SNI_UI2
 {
@@ -19,11 +20,15 @@ namespace SNI_UI2
             Configuration = configuration;
         }
 
+        
+
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+
             services.AddRazorPages();
             services.AddControllers().AddJsonOptions(JsonOptions =>
                     JsonOptions.JsonSerializerOptions.PropertyNamingPolicy = null);

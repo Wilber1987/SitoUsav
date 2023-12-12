@@ -1,8 +1,27 @@
-@page
-@{
-  Layout = "_Layout_Usav";
-}
-<div class="conten">
+@page 
+@model SNI_UI2.Pages.Usav.ReproducirVideoModel
+@using SNI_UI2.Services
 
-    <iframe id="youtubeIframe" width="80%" height="500px" frameborder="0" allowfullscreen></iframe>
-</div>
+@{
+    Layout = "_Layout_Usav";
+}
+
+<section class="conten-videos">
+    @if (Model.SelectedVideo != null)
+    {
+        <div class="video">
+            <iframe width="70%" height="500px" frameborder="0" allowfullscreen 
+            src="https://www.youtube.com/embed/@Model.SelectedVideo.URL"></iframe>
+            <div>
+                <div>
+                    <h2>@Model.SelectedVideo.Titulo</h2>
+                    <p>@Model.SelectedVideo.Descripcion</p>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <p>Video no encontrado</p>
+    }
+</section>
