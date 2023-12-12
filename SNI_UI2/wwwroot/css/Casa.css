@@ -357,12 +357,15 @@ height: 654px;
   .u-section-2 .u-image-1 {
     height: 247px;
   }
+
+
 } .u-section-3 {
   min-height: 1094px;
   background-image: none;
 }
 
 .u-section-3 .u-shape-1 {
+
   height: 372px;
   margin-top: 0;
   margin-bottom: 0;
@@ -378,10 +381,16 @@ height: 654px;
   background-image: url("/Media/Image/Sol 2.png");
   background-position: 50% 50%;
 }
+.u-section-3 .u-image-1 {
+  min-height: 371px;
+  background-image: url("/Media/Image/Sol 2.png");
+  background-position: 50% 50%;
+}
 
 .u-section-3 .u-container-layout-1 {
   box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
   padding: 30px;
+  
 }
 
 .u-section-3 .u-layout-cell-2 {
@@ -405,6 +414,11 @@ height: 654px;
   background-image: url("/Media/Image/f Ciencia tecnologia y salud.jpg");
   background-position: 50% 50%;
 }
+.u-section-3 .u-image-2 {
+  min-height: 375px;
+  background-image: url("/Media/Image/f Ciencia tecnologia y salud.jpg");
+  background-position: 50% 50%;
+}
 
 .u-section-3 .u-container-layout-4 {
   box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
@@ -415,6 +429,12 @@ height: 654px;
   min-height: 368px;
   background-image: url("/Media/Image/F Ciencias de la educacion y humanidades.jpg");
   background-position: 50% 50%;
+}
+.u-section-3 .u-image-3 {
+  min-height: 368px;
+  background-image: url("/Media/Image/F Ciencias de la educacion y humanidades.jpg");
+  background-position: 50% 50%;
+  
 }
 
 .u-section-3 .u-container-layout-5 {
@@ -442,11 +462,19 @@ height: 654px;
   min-height: 368px;
   background-image: url("/Media/Image/F ciencias esconomica empremsariales .jpg");
   background-position: 50% 50%;
+  white-space: nowrap; /* Evita que las tarjetas se envuelvan a la siguiente línea */
+}
+.u-section-3 .u-image-4 {
+  min-height: 368px;
+  background-image: url("/Media/Image/F ciencias esconomica empremsariales .jpg");
+  background-position: 50% 50%;
+  white-space: nowrap; /* Evita que las tarjetas se envuelvan a la siguiente línea */
 }
 
 .u-section-3 .u-container-layout-8 {
   box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
   padding: 30px;
+ 
 }
 
 .u-section-3 .u-list-1 {

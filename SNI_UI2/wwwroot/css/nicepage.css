@@ -3117,6 +3117,7 @@ a:focus {
 .u-clearfix:before {
   content: '';
   display: table;
+  
 }
 .u-clearfix:after {
   clear: both;
@@ -17667,6 +17668,7 @@ p {
 }
 .u-align-center {
   text-align: center;
+  
 }
 @media (min-width: 1400px) {
   .u-align-center-xxl {
