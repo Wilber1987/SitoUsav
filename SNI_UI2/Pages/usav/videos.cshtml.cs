@@ -12,14 +12,15 @@ namespace SNI_UI2.Pages.Usav
 
         public Video SelectedVideo { get; set; }
 
-        public IActionResult OnGet(int? videoId, string videoUrl)
+        public IActionResult OnGet(int? id) // Cambia el nombre del parámetro a 'id'
         {
-            if (videoId.HasValue && !string.IsNullOrEmpty(videoUrl))
+            if (id.HasValue)
             {
+                // Utiliza el parámetro 'id' para obtener el video
                 var videoService = new VideoService(connectionString);
-                SelectedVideo = videoService.GetVideoById(videoId.Value);
+                SelectedVideo = videoService.GetVideoById(id.Value);
 
-                if (SelectedVideo != null && SelectedVideo.URL == videoUrl)
+                if (SelectedVideo != null)
                 {
                     return Page();
                 }
@@ -30,9 +31,8 @@ namespace SNI_UI2.Pages.Usav
                 }
             }
 
-            // Manejo si el ID o la URL no están presentes
+            // Manejo si el 'id' no está presente
             return RedirectToPage("/Errorid");
         }
     }
 }
-

@@ -8,18 +8,10 @@
 <section class="galleryvideo">
     <h2 class="titulo">NUESTRO TRABAJO</h2>
     <div class="conten">
-        @foreach(var video in new Videos().Get<Videos>()){
-            <div class="contenedor-imagen">
-                <a href="~/usav/videos?videoId=@video.URL">
-                    <img class="img" src="@video.ImagenURL" alt="">
-                    <img src="/imagenes/iconoPlay.png" class="icono-play" alt="Icono de reproducción">
-                </a>
-            </div>
-            }
-        @foreach (var video in Model.Videos)
+        @foreach(var video in new Videos().Get<Videos>())
         {
             <div class="contenedor-imagen">
-                <a href="~/usav/videos?videoId=@video.URL">
+                <a href="~/usav/videos?id=@video.Id">
                     <img class="img" src="@video.ImagenURL" alt="">
                     <img src="/imagenes/iconoPlay.png" class="icono-play" alt="Icono de reproducción">
                 </a>
