@@ -26,6 +26,7 @@ button.carousel {
     padding: 10px;
     font-size: 16px;
     cursor: pointer;
+    background-color: #dc2f34;
 }
 
 button:first-child {
@@ -35,9 +36,11 @@ button:first-child {
 button:last-child {
     right: 0;
 }
-
+button:hover {
+    background-color: #fbb908;
+}
 .employee-card {
-    background-color: #083457;
+    background-color: #a9a6a6;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
@@ -59,7 +62,7 @@ button:last-child {
 
 .employee-card p {
     font-size: 14px;
-    color: #555;
+    color: #f2f2f2;
 }
 
 

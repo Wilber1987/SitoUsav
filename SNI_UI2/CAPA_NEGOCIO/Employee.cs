@@ -7,6 +7,9 @@ namespace SNI_UI2.CAPA_NEGOCIO
         public string Name { get; set; }
         public string Position { get; set; }
         public int Experience { get; set; }
+
+        //public byte[] Imagen  {get; set;}
+    
     }
 
     public class Video : EntityClass
